@@ -1,4 +1,4 @@
-package changefilename;
+package rename;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -43,7 +43,7 @@ public class Rename {
 				// 判断出文件和文件夹
 				if (!oldFile.isDirectory()) {
 					// 文件则判断是不是要修改的
-					if (oldName.contains(".m")) {
+					if (oldName.endsWith(".m")) {
 						System.out.println(oldName);
 						String newoldName = oldName.substring(0, oldName.lastIndexOf(".")) + ".txt";
 						System.out.println(newoldName);
